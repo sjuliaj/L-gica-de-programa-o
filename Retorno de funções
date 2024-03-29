@@ -1,0 +1,24 @@
+//Retorno da função
+
+function retornar(){ // Abro a função retornar
+    function bomDia(){ // Abro outra dentro dela
+        return "Bom diaaa";//Informo o que tem dentro dela
+    }
+    return bomDia();// retorno aqui dentro a função
+}
+
+console.log(retornar());// Mostro para o usuário a função e mostro também o que tem dentro da função
+
+
+// Segundo retorno
+
+function retornarUmaFuncao(){
+    return function(){
+        return "Boa tarde";
+    }
+}
+console.log(retornarUmaFuncao);
+
+console.log(retornarUmaFuncao());
+
+console.log(retornarUmaFuncao()());
