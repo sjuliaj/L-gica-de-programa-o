@@ -1,0 +1,90 @@
+// Apresentando funções em variáveis 
+
+// Função anôninma e sem nome
+// cria uma constante e adiciona uma função anonima
+const somar = function (a, b) {
+    return a + b;
+}
+
+console.log(somar(x, y));
+
+const subtrair = function (y, z) {
+    return y - z;
+}
+//Passando uma função como parâmetro em outra função
+
+function executar(funcao) {
+    if (typeof funcao === "function") {
+        console.log(funcao());
+    }
+}
+
+function bomDia() {
+    return "Bom dia";
+
+}
+
+executar(3);
+executar(bomDia);
+
+//Reutilizando funções
+
+//function soma(a, b){
+//return a + b;
+//}
+//function Multiplica(a, b){
+//  return a * b;
+//}
+
+//function Cauculadora(operacao, a , b){
+//if(typeof operacao ==="function"){
+//  return operacao(a, b);
+//}
+//  throw new TypeError("Operação precisa ser uma função");
+//}
+//const resultadoSoma = calculadora(soma, 5, 3);
+//const resultadoSubtracao = calculadora(Multiplica, 7, 2);
+
+//console.log(resultadoSoma);
+//console.log(resultadoSubtracao);
+
+
+// Exercício para treinar 
+
+
+function soma(a, b) {
+    return a + b;
+}
+
+function subtracao(a, b) {
+    return a - b;
+}
+
+function div(a, b) {
+    return a / b;
+}
+
+function aplicarOperacao(array, operacao){
+    const resultados = [];
+    for (const numero of array) {
+        resultados.push(operacao(numero, 2));
+    }
+    return resultados;
+}
+    
+
+const numeros = [1, 2, 3, 4, 5, 6];
+const resultadosSoma = aplicarOperacao(numeros, soma);
+const resultadosSub = aplicarOperacao(numeros, subtracao);
+const resultadosDiv = aplicarOperacao(numeros, div);
+
+
+console.log("Resultado de soma");
+console.log(resultadosSoma);
+
+console.log("Resultado de subtração");
+console.log(resultadosSub);
+
+console.log("Resultado de divisão");
+console.log(resultadosDiv);
+
