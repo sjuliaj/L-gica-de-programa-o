@@ -1,0 +1,30 @@
+const nota1 = 7.8;
+const nota2 = 3.1;
+const nota3 = 6.8;
+let media;
+
+function Media(nota1, nota3){
+media = (nota1 + nota3) / 2;
+console.log("A sua média é", media);
+}
+
+function Status(media){
+
+    if(media >= 7.0){
+        console.log("O aluno está aprovado!");
+    } else if((media <= 6.9) && (media >= 4.0)){
+        console.log("O aluno está de recuperação")
+    } else{
+        console.log("O aluno está reprovado");
+    }
+}
+
+function MostrandoResultados(nota1, nota2, nota3, media){
+    console.log("Os resultados das notas são:", nota1, "," + nota2,  "," + nota3);
+    console.log("Os resultados da media é:", media);
+
+}
+
+Media(nota1, nota2);
+Status(media);
+MostrandoResultados(nota1, nota2, nota3, media);
